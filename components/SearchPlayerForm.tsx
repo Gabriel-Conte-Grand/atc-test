@@ -123,6 +123,7 @@ export const SearchPlayerForm: FC<Props> = ({
                     }}
                     id={player.player_id}
                     className={tabStyle}
+                    key={player.player_id}
                   >
                     <p>{player.player_name}</p>
                     <p className='text-sm'> ({player.team_name})</p>
