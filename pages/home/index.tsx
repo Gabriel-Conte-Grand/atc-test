@@ -72,7 +72,7 @@ const HomePage: NextPage = () => {
   }
 
   return (
-    <div className='flex text-white flex-col  pb-12    md:pb-8 gap-5 p-2 items-center bg-gray-100 md:w-3/5 md:mx-auto'>
+    <div className='flex text-white flex-col  pb-12    md:pb-8 gap-5 p-2 items-center bg-gray-100 md:w-3/5 md:h-max md:mx-auto'>
       <h1 className='font-poppins tracking-wide mt-6 font-semibold text-3xl text-green-700 leading-loose uppercase'>
         ⭐ Dream <span className='text-green-700'>Match</span> ⭐
       </h1>
@@ -161,9 +161,19 @@ const HomePage: NextPage = () => {
                       <li key={idx}>{idx === 0 ? "Arquero" : "Jugador"}</li>
                     )
                   }
+                  const currentPlayer = teamB.players[idx]
                   return (
-                    <li key={teamB?.players[idx].player_id}>
-                      {teamB?.players[idx].player_name}
+                    <li key={currentPlayer.player_id}>
+                      {currentPlayer.player_name}
+
+                      <button
+                        onClick={() =>
+                          deletePlayer("teamB", currentPlayer.player_id)
+                        }
+                        className='absolute  text-gray-600 bg-white -left-7 border rounded text-base shadow-lg  px-2'
+                      >
+                        x
+                      </button>
                     </li>
                   )
                 })

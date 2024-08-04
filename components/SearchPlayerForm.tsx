@@ -112,7 +112,7 @@ export const SearchPlayerForm: FC<Props> = ({
                 const tabStyle = classNames(
                   `text-gray-500 hover:cursor-pointer bg-white h-16 truncate  border font-medium border-black flex flex-col justify-center items-center   rounded-lg`,
                   {
-                    "bg-green-400 text-white": isSamePlayer,
+                    "text-green-500 border-green-500 font-bold": isSamePlayer,
                   }
                 )
 
@@ -141,7 +141,7 @@ export const SearchPlayerForm: FC<Props> = ({
             <button
               disabled={!chosenPlayer}
               onClick={() => addPlayerToTeam("teamA", chosenPlayer!)}
-              className='w-1/2 disabled:bg-opacity-60 shadow-lg rounded bg-red-400 border p-2'
+              className='w-1/2 disabled:bg-opacity-60 shadow-lg rounded bg-red-400 border p-2 hover:bg-opacity-85 duration-75'
             >
               Agregar a {teamA.name}
             </button>
@@ -150,7 +150,7 @@ export const SearchPlayerForm: FC<Props> = ({
             <button
               disabled={!chosenPlayer}
               onClick={() => addPlayerToTeam("teamB", chosenPlayer!)}
-              className=' w-1/2 disabled:bg-opacity-60 shadow-lg rounded bg-blue-400 border p-2'
+              className=' w-1/2 disabled:bg-opacity-60 shadow-lg rounded bg-blue-400 border p-2 hover:bg-opacity-85 duration-75'
             >
               Agregar a {teamB.name}
             </button>

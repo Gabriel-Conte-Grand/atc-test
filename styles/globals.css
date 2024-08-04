@@ -4,9 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-gray-100;
+}
+
 .squad-ul-1 > li {
   @apply p-2 border bg-red-400 w-10/12 rounded-lg relative;
 }
 .squad-ul-2 > li {
-  @apply p-2 border bg-blue-400 w-10/12  rounded-lg;
+  @apply p-2 border bg-blue-400 w-10/12  rounded-lg relative;
 }
