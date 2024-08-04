@@ -8,6 +8,9 @@ import Image from "next/image"
 export default function Welcome() {
   return (
     <div>
+      <Head>
+        <title>ATC | Bienvenido</title>
+      </Head>
       <div className='flex md:hidden'>
         <MobileWelcome />
       </div>
@@ -24,6 +27,7 @@ export default function Welcome() {
 //- The data can be publicly cached (not user-specific).
 //- The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
 import { GetStaticProps } from "next"
+import Head from "next/head"
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   // const { data } = await  // your fetch function here

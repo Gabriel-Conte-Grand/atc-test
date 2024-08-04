@@ -1,6 +1,7 @@
 import { SearchPlayerForm } from "@/components/SearchPlayerForm"
 import { Player } from "@/types/playerTypes"
 import { NextPage } from "next"
+import Head from "next/head"
 import React, { useEffect, useRef, useState } from "react"
 
 export type Team = {
@@ -73,6 +74,9 @@ const HomePage: NextPage = () => {
 
   return (
     <div className='flex text-white flex-col  pb-12    md:pb-8 gap-5 p-2 items-center bg-gray-100 md:w-3/5 md:h-max md:mx-auto'>
+      <Head>
+        <title>ATC | Home</title>
+      </Head>
       <h1 className='font-poppins tracking-wide mt-6 font-semibold text-3xl text-green-700 leading-loose uppercase'>
         ⭐ Dream <span className='text-green-700'>Match</span> ⭐
       </h1>
