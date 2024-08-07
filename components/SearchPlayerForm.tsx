@@ -54,7 +54,7 @@ export const SearchPlayerForm: FC<Props> = ({
       teamA?.players.find(
         (prevPlayer) => prevPlayer.player_id === newPlayer.player_id
       ) ||
-      teamA?.players.find(
+      teamB?.players.find(
         (prevPlayer) => prevPlayer.player_id === newPlayer.player_id
       )
     ) {
